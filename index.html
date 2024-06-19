@@ -1,0 +1,623 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mercure Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <header class="site-header js-site-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Mercure Center</a></div>
+          <div class="col-6 col-lg-8">
+
+
+            <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- END menu-toggle -->
+
+            <div class="site-navbar js-site-navbar">
+              <nav role="navigation">
+                <div class="container">
+                  <div class="row full-height align-items-center">
+                    <div class="col-md-6 mx-auto">
+                      <ul class="list-unstyled menu">
+                        <li class="active"><a href="index.html">Главная</a></li>
+                        <li><a href="rooms.html">Номера</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="events.html">События</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="reservation.html">Бронирование</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END head -->
+
+    <section class="site-hero overlay" style="background-image: url(images/hotelmain.png)" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+          <div class="col-md-10 text-center" data-aos="fade-up">
+            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 4 <span class="fa fa-star text-primary"></span>Hotel</span>
+            <h1 class="heading">Mercure Center</h1>
+          </div>
+        </div>
+      </div>
+
+      <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+      </a>
+    </section>
+    <!-- END section -->
+
+    <section class="section bg-light pb-0"  >
+      <div class="container">
+       
+        <div class="row check-availabilty" id="next">
+          <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
+
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                  <label for="checkin_date" class="font-weight-bold text-black">Дата заезда</label>
+                  <div class="field-icon-wrap">
+                    <div class="icon"><span class="icon-calendar"></span></div>
+                    <input type="text" id="checkin_date" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                  <label for="checkout_date" class="font-weight-bold text-black">Дата выезда</label>
+                  <div class="field-icon-wrap">
+                    <div class="icon"><span class="icon-calendar"></span></div>
+                    <input type="text" id="checkout_date" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                  <div class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label for="adults" class="font-weight-bold text-black">Взрослые</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                        <select name="" id="adults" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4+</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label for="children" class="font-weight-bold text-black">Дети</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                        <select name="" id="children" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4+</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 align-self-end">
+                  <button id="showNotification" class="btn btn-primary btn-block text-white">Забронировать</button>
+                  <script>
+                    document.getElementById('showNotification').addEventListener('click', function() {
+                    var notification = document.createElement('div');
+                    notification.innerHTML = 'Номер забронирован';
+                    notification.classList.add('notification');
+  
+                    document.body.appendChild(notification);
+  
+                    setTimeout(function() {
+                    notification.remove();
+                    }, 3000);
+                    });
+                  </script>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
+            <figure class="img-absolute">
+              <img src="images/h5.jpg" alt="Image" class="img-fluid">
+            </figure>
+            <img src="images/h1.jpg" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
+            <h2 class="heading">Добро пожаловать!</h2>
+            <p class="mb-4">Отель Mercure Saransk Center находится в деловой и культурной части города, рядом с основными достопримечательностями. До международного аэропорта добираться на машине всего 10 минут, а до ближайшего вокзала около 7 минут. Поблизости можно посетить музеи, торговые центры, театры, смотровую площадку, а также берег реки Саранка. </p>
+            <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Подробнее</a></p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Номера</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Элегантный дизайн, современные технологии и отличное обслуживание ждут отдыхающих в Mercure Saransk Center. </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/h2.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Стандартный номер с двуспальной кроватью</h2>
+                <span class="text-uppercase letter-spacing-1">3000₽ / одна ночь</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/h3.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Улучшенный Премьер Люкс</h2>
+                <span class="text-uppercase letter-spacing-1">8000₽ / одна ночь</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/h4.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Номер Привилегия</h2>
+                <span class="text-uppercase letter-spacing-1">5000₽ / одна ночь</span>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="section slider-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Фотографии</h2>
+            <p data-aos="fade-up" data-aos-delay="100">От лица всей команды отеля рада приветствовать вас в Меркюр Саранск Центр. Современные номера с уникальным дизайном, отличный сервис и внимание к деталям обеспечат вам комфорт на протяжении всей поездки.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="slider-item">
+                <a href="images/s1.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s1.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s2.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s2.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s3.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s4.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s4.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s5.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s5.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s6.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s6.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/s7.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/s7.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+            </div>
+            <!-- END slider -->
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+    
+    <section class="section bg-image overlay" style="background-image: url('images/hero_3.jpg');">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading text-white" data-aos="fade">Меню нашего ресторана</h2>
+            <p class="text-white" data-aos="fade" data-aos-delay="100">В ресторане подают блюда, вдохновленные местными кулинарными традициями и современными тенденциями. Вина из нашей коллекции "Ароматы из погреба" являются идеальным дополнением к любому блюду.</p>
+          </div>
+        </div>
+        <div class="food-menu-tabs" data-aos="fade">
+          <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active letter-spacing-2" id="mains-tab" data-toggle="tab" href="#mains" role="tab" aria-controls="mains" aria-selected="true">Главные блюда</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link letter-spacing-2" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Десерты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link letter-spacing-2" id="drinks-tab" data-toggle="tab" href="#drinks" role="tab" aria-controls="drinks" aria-selected="false">Напитки</a>
+            </li>
+          </ul>
+          <div class="tab-content py-5" id="myTabContent">
+            
+            
+            <div class="tab-pane fade show active text-left" id="mains" role="tabpanel" aria-labelledby="mains-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1400₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Драники</a></h3>
+                    <p class="text-white text-opacity-7">Редкий завтрак в ресторане сегодня обходится без драника. На пухлые или тонкие как бумага овощные оладьи монтируют яйцо бенедикт, выкладывают лосося и краба, используют как основу для окончательно утвердившегося в ранге главного утреннего блюда авокадо-тоста. </p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">3000₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Командорский кальмар</a></h3>
+                    <p class="text-white text-opacity-7">Командорский кальмар BBQ, запеченный на гигантском гриле робата и сервированный в предельно натуралистическом ключе, целиковой внушительной тушкой с лоснящейся соусом кожей и всеми положенными щупальцами, стал нашей визитной карточкой.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">700₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Тако</a></h3>
+                    <p class="text-white text-opacity-7">Мексиканский фастфуд вовсю теснит привычные бургеры и хот-доги. Уличная еда в очередной раз переживает ренессанс, и, похоже, эта новая старая мода уже переманивает к себе тех, кто есть на ходу считает неприличным. С барами все понятно — хрусткими кукурузными лепешками на один укус удобно закусывать за барной стойкой, поэтому тако в коктейльных заведениях размножается с космической скоростью.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1300₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Токпокки</a></h3>
+                    <p class="text-white text-opacity-7">Корейские рисовые палочки, похожие то ли на русские клецки, то ли на итальянские ньокки, в этом году явно в фаворе, и не только в стремительно увеличивающейся популяции корейских ресторанных сетей. </p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1670₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Ромовая баба</a></h3>
+                    <p class="text-white text-opacity-7">Ромовая баба в этом году сделала стремительную карьеру, преодолев дистанцию от булочки с липкой помадкой до ресторанного десерта, пропитанного самым разнообразным алкоголем в невероятно гламурной подаче. В 2022-м ее готовили практически везде: мескаль-баба в Sangre fresca, земляничная с пломбиром в «Северянах», с лимонным кремом в Nome, замаринованная в огромной банке с ромом в Champ Bistro — вот только краткий список отличнейших баб, которых мы вспомнили навскидку.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">400₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Шпроты</a></h3>
+                    <p class="text-white text-opacity-7">Шпроты стали вдруг интересны всем вокруг. И даже поколению шефов, кому по возрасту не положено знать про праздничный советский шпротный паштет, после которого приходилось полоскать рот или вовсе не дышать на собеседника. Кажется, шпроты становятся чем-то вроде национальных сардин из банок с золотым колечком. Первыми нащупали эту золотую жилу распивочные и рюмочные (которых в этом году расплодилось без счета) — и правильно сделали: бутерброды со шпротами все так же отлично уходят под водку.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div> <!-- .tab-pane -->
+
+            <div class="tab-pane fade text-left" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1100₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Лимонный тарт с меренгой</a></h3>
+                    <p class="text-white text-opacity-7">Десерт, узнаваемый с первого взгляда: в основании у него всегда корж из теста (песочный или бисквитный), затем — лимонный крем, а потом — белые пики меренги, опаленные огнем на макушке. </p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">600₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Пирожное макарон</a></h3>
+                    <p class="text-white text-opacity-7">Главное в этих разноцветных кругляшах, скрепленных тонким слоем крема, — особая магия.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1900₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Панна-котта с ягодами</a></h3>
+                    <p class="text-white text-opacity-7">Итальянская панна-котта — это уже «крем запеченный». Вроде разница в одно слово с французским крем-брюле, но дистанция огромного размера. Тающая структура, свежие ягоды, а главное — воспоминание о каникулах в Италии, где, кажется, даже воздух был сделан из панна-котты — такой же легкий, душистый и радостный.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">2900₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Профитроли с кракелюром</a></h3>
+                    <p class="text-white text-opacity-7">Классические профитроли — это невесомые шарики с ванильным мороженым, политые горячим шоколадом; выглядят сложно, парадно и празднично, но если выпечь заготовки из заварного теста заранее, останется только их начинить, полить соусом и подать за две минуты — за это профитроли любят кондитеры и повара.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1150₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Крем-брюле с апельсином</a></h3>
+                    <p class="text-white text-opacity-7">В переводе название этого десерта — всего-то «сожженный крем», почти синоним поварского провала. Но вот тут-то в силу вступает умение французов с шиком преподносить любую безделушку: эта неуловимая текстура дрожащего суфле, эта стеклянная сахарная корочка, которую так любила разбивать вдребезги ложкой любимица публики Амели Пулен. Соседство несопоставимого: хруст и нежность, крем-брюле.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">3540₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Саварен</a></h3>
+                    <p class="text-white text-opacity-7">Десерт изобрели в XIX веке братья Жюльен. Саварен считался в те времена лучшим видом кондитерского теста. Название десерта посвящено кулинарному критику, писателю и гурману — Ж. Брийя-Саворену.  @ Источник https://frenchparis.ru/desert/</p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- .tab-pane -->
+            <div class="tab-pane fade text-left" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">550₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Бамбл</a></h3>
+                    <p class="text-white text-opacity-7">Холодный веселый напиток: кофе с апельсиновым соком, уложенные полосками. Отсюда и сравнение со шмелем (bumblebee по-английски — шмель).</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">350₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Гранито кон панна</a></h3>
+                    <p class="text-white text-opacity-7">Так обращаются с кофе в ресторане Seven: эспрессо, сливки, миндальный и шоколадный сиропы и лед.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">650₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Кофе со льдом и сгущенкой</a></h3>
+                    <p class="text-white text-opacity-7">Сладость и липкость нивелированы льдом.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">850₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Кофейный лимонад</a></h3>
+                    <p class="text-white text-opacity-7">Не просто лимонад, а лимонад, в котором встречаются кофе и чай. Приправлено мандаринами и соком лайма.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">1150₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Медовый стаут</a></h3>
+                    <p class="text-white text-opacity-7">Как пиво, но не пиво: холодный кофе с медом и апельсинами.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">950₽</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Гонконгский кофе</a></h3>
+                    <p class="text-white text-opacity-7">Насыщенный рецепт: кофе с чаем, молоко со сгущенкой и кунжут.</p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- .tab-pane -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- END section -->
+    <section class="section testimonial-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Отзывы людей</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;Персонал очень хороший. Комфорт и чистота хорошие. Он находится недалеко от основных достопримечательностей.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash;Кристина Кудряшова</em></p>
+            </div> 
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+                <p>&ldquo;Центральное расположение, основные достопримечательности в пешей доступности. Превосходный континентальный завтрак. Хорошая звукоизоляция, при закрытом окне никакой шум не мешал. Удобные кровати. Прекрасное соотношение цены и качества.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Андрей Николаев</em></p>
+            </div>
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;Отличное отношение персонала. Место расположения хорошее. Завтрак отличный. Прекрасная атмосфера.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Артём Григорьев</em></p>
+            </div>
+
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;Понравилось все,постоянно останавливаясь в этом отеле.Чисто,уютно&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Алиса Степашкина</em></p>
+            </div> 
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+                <p>&ldquo;Очень тихий и спокойный отель. На ресепшн нас встретили приветливо, быстро оформили. Номер чистый и теплый, удобные кровати, чистое белье и полотенца, хорошие подушки. Для одной ночевки в командировке отличный отель, рекомендую!&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Никита Сайгин</em></p>
+            </div>
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;Это самый лучший отель, в которых я останавливалась. Номер очень чистый, красивый и уютный! Кровать удобная, окна панорамные - просто картинка! Дружелюбные администраторы, потрясаюше вкусный завтрак, я в полном восторге!&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Алёна Зайцева</em></p>
+            </div>
+
+          </div>
+            <!-- END slider -->
+        </div>
+
+      </div>
+    </section>
+    
+
+    <section class="section blog-post-entry bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Мероприятия</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/1d.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">Февраль 26, 2024</span>
+                <h2 class="mt-0 mb-3"><a href="#">Знакомство</a></h2>
+                <p>Управляющий службой кейтеринга отеля Mercure, чтобы ближе познакомить друг с другом участников конференции провел конкурс с привлечением шеф-повара местного ресторана. Гостям предлагалось приготовить закуску или полноценное блюдо за 30 минут с применением неизвестного ингредиента, который они узнают в тот момент, когда таймер включат.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/2d.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">Май 1, 2024</span>
+                <h2 class="mt-0 mb-3"><a href="#">Блюда с местными продуктами</a></h2>
+                <p>Чтобы познакомить гостей мероприятия с локальными продуктами, шеф-повар в отеле создает блюда, где использовались ингредиенты, выращенные исключительно в городе или регионе. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/3d.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">Июнь 6, 2024</span>
+                <h2 class="mt-0 mb-3"><a href="#">Кофе и коктейли</a></h2>
+                <p>Создание напитков на основе кофе и коктейлей завораживает и всегда привлекает взгляды гостей. Отель сети Mercure во время мероприятия установит специальную площадку «Spike It», где гости сами могли смешивать различные напитки. Что касается количества алкоголя, то организаторы заранее отмерили пропорции. Гости также могли создавать освежающие напитки без алкоголя.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-image overlay" style="background-image: url('images/s1.jpg');">
+        <div class="container" >
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+              <h2 class="text-white font-weight-bold">Лучшее место чтобы остановиться. Бронируйте номера сейчас!</h2>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Забронировать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="section footer-section">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3 mb-5">
+            <ul class="list-unstyled link">
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+             <li><a href="#">Номера</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <ul class="list-unstyled link">
+              <li><a href="#">Связаться с нами</a></li>
+              <li><a href="#">Ресторан</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5 pr-md-5 contact-info">
+            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Адрес:</span> <span> Коммунистическая улица, 37, 430005 Саранск, Россия</span></p>
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Телефон:</span> <span> (+8) (834) 254-65-46</span></p>
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@Mercure.com</span></p>
+          </div>
+          <div class="col-md-3 mb-5">
+            <p>Подпишитесь на нашу рассылку новостей</p>
+            <form action="#" class="footer-newsletter">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email...">
+                <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <p class="col-md-6 text-left">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+            
+          <p class="col-md-6 text-right social">
+            <a href="#"><span class="fa fa-tripadvisor"></span></a>
+            <a href="#"><span class="fa fa-facebook"></span></a>
+            <a href="#"><span class="fa fa-twitter"></span></a>
+            <a href="#"><span class="fa fa-linkedin"></span></a>
+            <a href="#"><span class="fa fa-vimeo"></span></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    
+    
+    <script src="js/aos.js"></script>
+    
+    <script src="js/bootstrap-datepicker.js"></script> 
+    <script src="js/jquery.timepicker.min.js"></script> 
+
+    
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
